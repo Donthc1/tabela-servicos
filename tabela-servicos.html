@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tabela Oficial de Serviços — NEXUS INTEL</title>
+  <meta name="description" content="Tabela de preços e serviços da Nexus Intel — Investigação Digital, OSINT, análise forense, relatórios profissionais.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#071323;
+      --card:#0b1320;
+      --muted:#b8c7d6;
+      --accent:#1ea7ff;
+      --accent-2:#0ea0d6;
+      --white:#e9f2fb;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background: linear-gradient(180deg,#06111b 0%, #071223 60%);
+      color:var(--white);-webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:28px;
+    }
+
+    .wrap{max-width:980px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-weight:800;font-size:22px;letter-spacing:1px}
+    .sub{color:var(--muted);font-size:13px}
+
+    .hero{
+      margin-top:18px;padding:22px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.03);box-shadow:0 10px 30px rgba(0,0,0,0.6)
+    }
+
+    .hero h1{margin:0;font-size:24px}
+    .hero p{color:var(--muted);margin:10px 0 0}
+
+    .badge-row{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
+    .btn{padding:10px 14px;border-radius:999px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);text-decoration:none;font-weight:700}
+    .cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#01202a;padding:10px 16px;border-radius:12px;font-weight:800;text-decoration:none}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid var(--glass);box-shadow:0 12px 30px rgba(2,8,20,0.6)}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .price{font-weight:800;color:var(--accent);font-size:20px;margin-bottom:8px}
+    .muted{color:var(--muted);font-size:14px}
+
+    .adicionais{margin-top:18px;padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.03)}
+
+    .foot{margin-top:20px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* responsive */
+    @media (max-width:980px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      .grid{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start}
+      .brand{font-size:20px}
+    }
+
+    /* small printable style */
+    @media print{
+      body{background: #fff;color:#000}
+      .hero, .card, .adicionais{background:#fff;border:1px solid #ddd;box-shadow:none}
+      .cta, .btn{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <header aria-label="Nexus Intel">
+      <div>
+        <div class="brand">NEXUS INTEL</div>
+        <div class="sub">Investigação Digital • Sigilo • Provas</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <a class="btn" href="/">Voltar ao site</a>
+        <!-- link para o PDF: verifique que /Tabela_Nexus_Intel.pdf exista na raiz -->
+        <a class="cta" href="/Tabela_Nexus_Intel.pdf" download>Baixar PDF da Tabela</a>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="titulo">
+      <h1 id="titulo">Tabela Oficial de Serviços — NEXUS INTEL</h1>
+      <p>Preços estratégicos, descrições claras e justificativas para clientes. Pagamento padrão: <strong>50% na abertura / 50% na entrega</strong>.</p>
+
+      <div class="badge-row" aria-hidden="true">
+        <div class="sub">Atendimento prioritário</div>
+        <div class="sub">Sigilo total</div>
+        <div class="sub">Relatórios prontos para uso jurídico</div>
+      </div>
+    </section>
+
+    <section aria-labelledby="servicos" style="margin-top:22px">
+      <h2 id="servicos" style="margin:0 0 10px">Planos</h2>
+
+      <div class="grid" role="list">
+        <article class="card" role="listitem" aria-labelledby="basic-title">
+          <div id="basic-title"><h3>Faixa 1 — Investigação Básica</h3></div>
+          <div class="price">R$ 250 – R$ 450</div>
+          <p class="muted"><strong>Prazo médio:</strong> 12–48h<br><strong>Pagamento:</strong> 50% início / 50% entrega</p>
+          <p class="muted" style="margin-top:8px"><strong>Inclui:</strong> coleta inicial OSINT; rastreio leve (número, e-mail, usuário); prints e evidências iniciais; relatório simples em PDF.</p>
+          <p style="margin-top:10px;color:var(--muted);font-size:13px">Recomendado para triagem e confirmação rápida de suspeitas.</p>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="complete-title">
+          <div id="complete-title"><h3>Faixa 2 — Investigação Completa (Recomendada)</h3></div>
+          <div class="price">R$ 650 – R$ 1.200</div>
+          <p class="muted"><strong>Prazo médio:</strong> 24–72h<br><strong>Pagamento:</strong> 50% início / 50% entrega</p>
+          <p class="muted" style="margin-top:8px"><strong>Inclui:</strong> OSINT avançado; rastreamento em redes sociais; histórico digital; análise de vínculos e conexões; cruzamento de dados; relatório detalhado profissional.</p>
+          <p style="margin-top:10px;color:var(--muted);font-size:13px">Ótimo equilíbrio entre custo e profundidade — indicado em 70% dos casos.</p>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="deep-title">
+          <div id="deep-title"><h3>Faixa 3 — Investigação Profunda / Forense</h3></div>
+          <div class="price">R$ 1.500 – R$ 3.000</div>
+          <p class="muted"><strong>Prazo médio:</strong> 24–96h<br><strong>Pagamento:</strong> 50% início / 50% entrega</p>
+          <p class="muted" style="margin-top:8px"><strong>Inclui:</strong> análise forense avançada; ferramentas profissionais; varredura profunda; mapa de conexões elaborado; laudo técnico; atendimento prioritário 24/7.</p>
+          <p style="margin-top:10px;color:var(--muted);font-size:13px">Indicado para casos judiciais, golpes complexos ou empresas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="adicionais" aria-labelledby="add" style="margin-top:18px">
+      <h3 id="add">Adicionais & Taxas</h3>
+      <ul style="color:var(--muted);margin:8px 0 0;padding-left:18px">
+        <li><strong>Taxa de urgência:</strong> +R$ 150 – R$ 400 (entrega acelerada “para hoje”)</li>
+        <li><strong>Alvo adicional:</strong> +R$ 80 – R$ 250 (cada número/perfil/e-mail extra)</li>
+        <li><strong>Taxa de confidencialidade premium:</strong> +R$ 100 (acesso restrito somente ao investigador responsável)</li>
+        <li><strong>Relatório forense em PDF formatado:</strong> +R$ 80 (ideal para advogados)</li>
+      </ul>
+
+      <div style="margin-top:12px;color:var(--muted)">
+        <strong>Observações:</strong> valores podem variar conforme complexidade do caso (ex.: múltiplos alvos, bloqueios técnicos, necessidade de ferramentas pagas). Pagamento inicial cobre horas de pesquisa, licenças de ferramentas e configuração do caso.
+      </div>
+    </section>
+
+    <section style="margin-top:18px">
+      <h3>Modelos de mensagens prontas</h3>
+      <div style="background:transparent;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);margin-top:8px">
+        <p style="color:var(--muted);margin:0 0 8px"><strong>Explicação do preço:</strong> "Utilizamos metodologia OSINT profissional e ferramentas forenses não disponíveis ao público. O investimento cobre infraestrutura e expertise que garantem provas verificáveis."</p>
+        <p style="color:var(--muted);margin:0 0 8px"><strong>Sinal de 50%:</strong> "O sinal garante início imediato do trabalho. O restante é pago após entrega do relatório."</p>
+      </div>
+    </section>
+
+    <div class="foot" role="contentinfo">
+      <div>NEXUS INTEL — Investigação Digital • Sigilo • Provas</div>
+      <div style="margin-top:6px">E-mail: contato@nexusintel.com • Tel/WhatsApp: +55 11 91307-6990</div>
+    </div>
+  </div>
+</body>
+</html>
