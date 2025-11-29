@@ -1,170 +1,252 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Tabela Oficial de Serviços — NEXUS INTEL</title>
-  <meta name="description" content="Tabela de serviços da Nexus Intel — Investigação Digital, OSINT, consultas e análise forense.">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NEXUS INTEL — Serviços Premium de Investigação Digital</title>
+  <meta name="description" content="NEXUS INTEL — Investigação digital profissional. Consultas por CPF, telefone, nome; OSINT; análise forense; relatórios aptos para uso jurídico. Atendimento sigiloso e prioritário."/>
+  <meta name="keywords" content="investigação digital, OSINT, CPF, telefone, localização, infidelidade, fraudes, relatório forense"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#071323">
+
+  <!-- Structured data (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "NEXUS INTEL",
+    "url": "https://nexusintel-sec.netlify.app/",
+    "logo": "https://nexusintel-sec.netlify.app/favicon-32.png",
+    "description": "Investigação digital profissional, consultas por CPF, telefone e nome, OSINT e análise forense.",
+    "areaServed": "BR",
+    "telephone": "+5511913076990",
+    "email": "contato@nexusintel.com"
+  }
+  </script>
+
   <style>
     :root{
-      --bg:#071323;
-      --card:#0b1320;
-      --muted:#b8c7d6;
-      --accent:#1ea7ff;
-      --accent-2:#0ea0d6;
-      --white:#e9f2fb;
+      --bg:#050812;
+      --card:#071323;
       --glass: rgba(255,255,255,0.03);
+      --muted:#98aac1;
+      --accent1:#1ea7ff;
+      --accent2:#0ea0d6;
+      --accent-cta:#0b2540;
+      --white:#eaf3fb;
+      --neon: 0 8px 30px rgba(30,167,255,0.12), 0 2px 8px rgba(14,160,214,0.08);
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
-      background: linear-gradient(180deg,#06111b 0%, #071223 60%);
+      background:
+        radial-gradient(1200px 400px at 10% 10%, rgba(14,160,214,0.06), transparent 6%),
+        radial-gradient(900px 300px at 95% 90%, rgba(30,167,255,0.04), transparent 6%),
+        linear-gradient(180deg,#03060a 0%, #071323 60%);
       color:var(--white);-webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      padding:28px;
+      -moz-osx-font-smoothing:grayscale;padding:28px;
     }
 
-    .wrap{max-width:980px;margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{font-weight:800;font-size:22px;letter-spacing:1px}
-    .sub{color:var(--muted);font-size:13px}
+    .container{max-width:1200px;margin:0 auto;padding:14px}
+
+    header{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .brand{display:flex;flex-direction:row;gap:12px;align-items:center}
+    .logo-circle{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#021822;box-shadow:var(--neon)}
+    .brand h1{margin:0;font-size:20px;letter-spacing:1px}
+    .tag{color:var(--muted);font-size:13px}
 
     .hero{
-      margin-top:18px;padding:22px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border:1px solid rgba(255,255,255,0.03);box-shadow:0 10px 30px rgba(0,0,0,0.6)
+      margin-top:18px;padding:28px;border-radius:14px;background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid var(--glass);box-shadow:0 12px 40px rgba(2,8,20,0.6);
+      position:relative;overflow:hidden;
     }
+    .hero .selo{position:absolute;right:22px;top:22px;background:linear-gradient(90deg,var(--accent2),var(--accent1));padding:10px 14px;border-radius:999px;font-weight:800;color:#021822;box-shadow:var(--neon)}
+    .hero h2{margin:0;font-size:30px;line-height:1.02}
+    .hero p{margin:10px 0 0;color:var(--muted);max-width:880px}
 
-    .hero h1{margin:0;font-size:24px}
-    .hero p{color:var(--muted);margin:10px 0 0}
+    /* subtle shimmer on title */
+    .shimmer{display:inline-block;background:linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.18), rgba(255,255,255,0.06));-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 3s linear infinite}
+    @keyframes sh{0%{background-position:-200px 0}100%{background-position:200px 0}}
 
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
-    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid var(--glass);box-shadow:0 12px 30px rgba(2,8,20,0.6)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));padding:20px;border-radius:12px;border:1px solid var(--glass);box-shadow:0 8px 30px rgba(2,8,20,0.6);transform:translateY(0);transition:transform .28s, box-shadow .28s}
+    .card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(2,8,20,0.8)}
     .card h3{margin:0 0 8px;font-size:18px}
-    .price{font-weight:800;color:var(--accent);font-size:20px;margin-bottom:8px}
+    .price{font-weight:800;color:var(--accent1);font-size:20px;margin-bottom:8px}
     .muted{color:var(--muted);font-size:14px}
 
-    .adicionais{margin-top:18px;padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.03)}
+    .list{margin:8px 0 0;padding-left:18px;color:var(--muted)}
+    .note{margin-top:12px;color:var(--muted);font-size:13px}
 
-    .foot{margin-top:20px;color:var(--muted);font-size:13px;text-align:center}
+    .adicionais{margin-top:18px;padding:16px;border-radius:12px;border:1px solid var(--glass);background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+    .cta-row{display:flex;gap:12px;align-items:center;margin-top:18px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:12px 18px;border-radius:12px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);text-decoration:none;font-weight:700}
+    .btn:hover{transform:translateY(-2px)}
+    .cta{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#042a31;padding:12px 20px;border-radius:12px;font-weight:900;text-decoration:none;box-shadow:var(--neon)}
+    .black-offer{background:linear-gradient(90deg,#020203,#081218);color:var(--accent1);border:2px solid rgba(255,255,255,0.04);padding:14px 20px;border-radius:999px;font-weight:900}
+
+    /* sticky bottom CTA */
+    .sticky{
+      position:fixed;right:20px;bottom:20px;z-index:1200;display:flex;align-items:center;gap:12px;
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));padding:12px;border-radius:999px;box-shadow:var(--neon)
+    }
+    .sticky a{color:#021822;font-weight:900;text-decoration:none;padding:6px 10px;border-radius:8px;background:transparent}
+
+    /* benefits row */
+    .benefits{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .benefit{padding:12px;border-radius:10px;background:rgba(255,255,255,0.01);border:1px solid rgba(255,255,255,0.02);color:var(--muted);font-weight:600}
+
+    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
 
     /* responsive */
-    @media (max-width:980px){
-      .grid{grid-template-columns:repeat(2,1fr)}
-    }
-    @media (max-width:640px){
-      .grid{grid-template-columns:1fr}
-      header{flex-direction:column;align-items:flex-start}
-      .brand{font-size:20px}
-    }
-
-    @media print{
-      body{background: #fff;color:#000}
-      .hero, .card, .adicionais{background:#fff;border:1px solid #ddd;box-shadow:none}
-    }
+    @media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:640px){.grid{grid-template-columns:1fr}.hero h2{font-size:22px}.logo-circle{width:46px;height:46px}}
   </style>
 </head>
 <body>
-  <div class="wrap" role="main">
-    <header aria-label="Nexus Intel">
-      <div>
-        <div class="brand">NEXUS INTEL</div>
-        <div class="sub">Investigação Digital • Sigilo • Provas</div>
+  <div class="container">
+    <header>
+      <div class="brand" aria-label="Nexus Intel">
+        <div class="logo-circle" aria-hidden="true">NI</div>
+        <div>
+          <h1 style="margin:0">NEXUS INTEL <span style="font-weight:600;font-size:13px;color:var(--muted);display:block;margin-top:4px">Investigação Digital • Sigilo • Provas</span></h1>
+        </div>
       </div>
-      <!-- sem botões públicos para download - manter invisível no site -->
-      <div style="opacity:0.0;pointer-events:none;visibility:hidden">
-        <!-- local reservado caso queira colocar link privado mais tarde -->
+
+      <div style="text-align:right">
+        <div class="tag">Agilidade • Confidencialidade • Resultados</div>
       </div>
     </header>
 
-    <section class="hero" aria-labelledby="titulo">
-      <h1 id="titulo">Tabela Oficial de Serviços — NEXUS INTEL</h1>
-      <p>Valores e pacotes de investigação digital. Documentação e relatório profissional entregues após análise. Pagamento padrão: <strong>50% na abertura / 50% na entrega</strong>.</p>
-    </section>
+    <main>
+      <section class="hero" aria-labelledby="main-title">
+        <div class="selo" role="note">100% SIGILO</div>
+        <h2 id="main-title"><span class="shimmer">Soluções Premium em Investigação Digital</span></h2>
+        <p>Serviços especializados em <strong>OSINT</strong>, investigação forense e consultas por <strong>CPF, telefone e nome completo</strong>. Entregamos provas estruturadas e relatórios prontos para uso profissional.</p>
 
-    <section aria-labelledby="servicos" style="margin-top:22px">
-      <h2 id="servicos" style="margin:0 0 10px">Planos e Serviços</h2>
+        <div class="benefits" role="list">
+          <div class="benefit">Atendimento sigiloso</div>
+          <div class="benefit">Prioridade em casos urgentes</div>
+          <div class="benefit">Relatórios aptos para processos</div>
+        </div>
 
-      <div class="grid" role="list">
-        <article class="card" role="listitem" aria-labelledby="basic-title">
-          <div id="basic-title"><h3>Investigação Básica</h3></div>
-          <div class="price">R$ 250 – R$ 450</div>
-          <p class="muted"><strong>Prazo médio:</strong> 12–48h<br><strong>Pagamento:</strong> 50% início / 50% entrega</p>
+        <div class="cta-row" role="group" aria-label="Ações">
+          <!-- aggressive black offer -->
+          <a class="black-offer" href="https://wa.me/5511913076990?text=Quero%20prioridade%20imediata%20-%20Nexus%20Intel" title="Oferta Black — Prioridade Imediata">OFERTA BLACK — PRIORIDADE IMEDIATA</a>
+          <a class="btn" href="mailto:contato@nexusintel.com">Solicitar Proposta (E-mail)</a>
+        </div>
+      </section>
 
-          <p class="muted" style="margin-top:8px"><strong>Inclui:</strong></p>
-          <ul style="color:var(--muted);margin:8px 0 0 18px">
-            <li>Coleta OSINT inicial (verificação de presença online e perfis públicos).</li>
-            <li>Rastreio leve por número, e-mail ou usuário.</li>
-            <li>Busca preliminar por nome e localizações públicas.</li>
-            <li>Prints e evidências iniciais organizadas em PDF.</li>
-          </ul>
+      <!-- packages -->
+      <section aria-labelledby="servicos" style="margin-top:22px">
+        <h3 id="servicos" style="margin:0 0 12px;font-size:18px">Planos & Serviços (valores a partir de)</h3>
 
-          <p style="margin-top:10px;color:var(--muted);font-size:13px">Recomendado para triagem e confirmação de suspeitas com baixo custo inicial.</p>
-        </article>
+        <div class="grid" role="list">
+          <!-- Package 1 -->
+          <article class="card" role="listitem" aria-labelledby="loc-title">
+            <h3 id="loc-title">Pacote — Localização Digital</h3>
+            <div class="price">A partir de R$ 450</div>
+            <p class="muted"><strong>Prazo médio:</strong> 12–48h • <strong>Pagamento:</strong> 50% início / 50% entrega</p>
+            <p class="muted" style="margin-top:8px"><strong>Inclui:</strong></p>
+            <ul class="list">
+              <li>Rastreamento OSINT aprofundado</li>
+              <li>Consulta por CPF, telefone e nome completo</li>
+              <li>Levantamento de endereços vinculados em fontes públicas</li>
+              <li>Mapa de conexões e evidências organizadas</li>
+            </ul>
+            <p class="note">Ideal para localizar pessoas, devedores ou suspeitos com prioridade.</p>
+          </article>
 
-        <article class="card" role="listitem" aria-labelledby="complete-title">
-          <div id="complete-title"><h3>Investigação Completa (Recomendada)</h3></div>
-          <div class="price">R$ 650 – R$ 1.200</div>
-          <p class="muted"><strong>Prazo médio:</strong> 24–72h<br><strong>Pagamento:</strong> 50% início / 50% entrega</p>
+          <!-- Package 2 -->
+          <article class="card" role="listitem" aria-labelledby="inf-title">
+            <h3 id="inf-title">Pacote — Investigação de Infidelidade</h3>
+            <div class="price">A partir de R$ 650</div>
+            <p class="muted"><strong>Prazo médio:</strong> 24–72h • <strong>Pagamento:</strong> 50% início / 50% entrega</p>
+            <p class="muted" style="margin-top:8px"><strong>Inclui:</strong></p>
+            <ul class="list">
+              <li>Mapeamento digital completo</li>
+              <li>Identificação de perfis alternativos</li>
+              <li>Consultas por telefone, CPF e nome (quando aplicável)</li>
+              <li>Relatório com prints, timeline e evidências consolidadas</li>
+            </ul>
+            <p class="note">Perfeito para confirmações discretas e provas para uso pessoal ou jurídico.</p>
+          </article>
 
-          <p class="muted" style="margin-top:8px"><strong>Inclui:</strong></p>
-          <ul style="color:var(--muted);margin:8px 0 0 18px">
-            <li>OSINT avançado e varredura em redes sociais públicas.</li>
-            <li>Cruzamento de dados e identificação de perfis alternativos.</li>
-            <li>Consultas ampliadas por dados públicos sob autorização: CPF (verificação de existência/registro público), busca por nome, telefone e endereços vinculados a fontes públicas e registros.</li>
-            <li>Mapa de conexões e relatório detalhado pronto para apresentação.</li>
-          </ul>
+          <!-- Package 3 -->
+          <article class="card" role="listitem" aria-labelledby="fra-title">
+            <h3 id="fra-title">Pacote — Investigação de Fraudes e Golpes</h3>
+            <div class="price">A partir de R$ 1.500</div>
+            <p class="muted"><strong>Prazo médio:</strong> 24–96h • <strong>Pagamento:</strong> 50% início / 50% entrega</p>
+            <p class="muted" style="margin-top:8px"><strong>Inclui:</strong></p>
+            <ul class="list">
+              <li>Rastreamento forense e identificação de golpistas</li>
+              <li>Cruzamento de dados e verificação por CPF/telefones</li>
+              <li>Mapas de conexões e identificação de possíveis cúmplices</li>
+              <li>Laudo técnico e relatório formatado para advogado</li>
+            </ul>
+            <p class="note">Indicado para casos com implicações judiciais e danos financeiros relevantes.</p>
+          </article>
+        </div>
+      </section>
 
-          <p style="margin-top:10px;color:var(--muted);font-size:13px">Equilíbrio ideal entre profundidade e custo — indicado na maioria dos casos complexos.</p>
-        </article>
+      <!-- Adicionais -->
+      <section class="adicionais" aria-labelledby="add-sec">
+        <h4 id="add-sec" style="margin:0 0 8px">Adicionais e Observações</h4>
+        <ul style="color:var(--muted);margin:8px 0 0 18px">
+          <li><strong>Taxa de urgência:</strong> +R$ 150–400 (para atendimento imediato “para hoje”)</li>
+          <li><strong>Alvo adicional:</strong> +R$ 80–250 por alvo extra</li>
+          <li><strong>Taxa de confidencialidade premium:</strong> +R$ 100 (acesso restrito ao investigador)</li>
+          <li><strong>Relatório forense formatado:</strong> +R$ 80 (ideal para processos)</li>
+        </ul>
 
-        <article class="card" role="listitem" aria-labelledby="deep-title">
-          <div id="deep-title"><h3>Investigação Profunda / Forense</h3></div>
-          <div class="price">R$ 1.500 – R$ 3.000</div>
-          <p class="muted"><strong>Prazo médio:</strong> 24–96h<br><strong>Pagamento:</strong> 50% início / 50% entrega</p>
+        <p class="note">Consultas por CPF, telefone e nome são realizadas com foco em fontes públicas e cruzamento OSINT. Serviços que exigirem legalidades específicas serão tratados mediante autorização formal do cliente.</p>
+      </section>
 
-          <p class="muted" style="margin-top:8px"><strong>Inclui:</strong></p>
-          <ul style="color:var(--muted);margin:8px 0 0 18px">
-            <li>Análise forense digital completa e investigação multilayer.</li>
-            <li>Uso de ferramentas profissionais e processos de validação para evidências admíssiveis em esfera jurídica.</li>
-            <li>Consultas aprofundadas (sob autorização e conforme legislação): verificação de CPF, checagem de histórico por nome, pesquisa por números de telefone, levantamento de endereços e vínculos públicos.</li>
-            <li>Laudo técnico detalhado, mapa de conexões e assistência prioritária 24/7.</li>
-          </ul>
+      <!-- Benefits -->
+      <section style="margin-top:18px">
+        <h4 style="margin:0 0 10px">Por que escolher a NEXUS INTEL?</h4>
+        <div class="benefits" role="list">
+          <div class="benefit">Técnica profissional e ferramentas avançadas</div>
+          <div class="benefit">Relatórios prontos para uso jurídico</div>
+          <div class="benefit">Atendimento rápido e sigiloso</div>
+          <div class="benefit">Garantia de comprometimento e ética</div>
+        </div>
+      </section>
 
-          <p style="margin-top:10px;color:var(--muted);font-size:13px">Indicado para casos judiciais, grandes fraudes ou empresas que necessitam de laudo técnico.</p>
-        </article>
-      </div>
-    </section>
+      <section style="margin-top:18px">
+        <h4 style="margin:0 0 8px">Próximo passo</h4>
+        <p style="color:var(--muted)">Envie uma mensagem pelo WhatsApp para avaliação rápida e sigilosa do seu caso. Após a pré-avaliação enviaremos proposta e contrato.</p>
+        <div style="margin-top:10px">
+          <a class="cta" href="https://wa.me/5511913076990?text=Quero%20avaliacao%20sigilosa%20imediata" title="Falar no WhatsApp">FALAR AGORA — PRIORIDADE IMEDIATA</a>
+        </div>
+      </section>
 
-    <section class="adicionais" aria-labelledby="add" style="margin-top:18px">
-      <h3 id="add">Adicionais & Taxas</h3>
-      <ul style="color:var(--muted);margin:8px 0 0;padding-left:18px">
-        <li><strong>Taxa de urgência:</strong> +R$ 150 – R$ 400 (entrega acelerada “para hoje”).</li>
-        <li><strong>Alvo adicional:</strong> +R$ 80 – R$ 250 (cada número/perfil/e-mail extra).</li>
-        <li><strong>Taxa de confidencialidade premium:</strong> +R$ 100 (acesso restrito somente ao investigador responsável).</li>
-        <li><strong>Relatório forense formatado para advocacia:</strong> +R$ 80.</li>
-      </ul>
-
-      <div style="margin-top:12px;color:var(--muted)">
-        <strong>Observações:</strong> Consultas e verificações por CPF/nome/telefone/endereço são realizadas sempre em conformidade com a legislação (LGPD). Serviços que envolvem dados pessoais sensíveis são executados apenas mediante autorização do cliente e documentação necessária. Valores podem variar conforme complexidade técnica.
-      </div>
-    </section>
-
-    <!-- seção de contato reduzida para quem já tem o link -->
-    <section style="margin-top:18px">
-      <h3>Como solicitar</h3>
-      <p style="color:var(--muted)">Para receber a Tabela oficial completa em PDF e iniciar o atendimento, entre em contato por WhatsApp ou e-mail. Após pré-avaliação, encaminharemos proposta específica e contrato.</p>
-      <p style="color:var(--muted)"><strong>WhatsApp:</strong> +55 11 91307-6990 • <strong>E-mail:</strong> contato@nexusintel.com</p>
-    </section>
-
-    <div class="foot" role="contentinfo">
-      <div>NEXUS INTEL — Investigação Digital • Sigilo • Provas</div>
-      <div style="margin-top:6px;color:var(--muted)">Documento restrito — disponibilize somente após contato inicial com o cliente.</div>
-    </div>
+      <footer>
+        <div>NEXUS INTEL — Investigação Digital • Sigilo • Provas</div>
+        <div style="margin-top:8px;color:var(--muted)">E-mail: contato@nexusintel.com • WhatsApp: +55 11 91307-6990</div>
+      </footer>
+    </main>
   </div>
+
+  <!-- sticky CTA bottom (Oferta Black agressiva) -->
+  <div class="sticky" role="complementary" aria-hidden="false">
+    <div style="font-weight:900;color:#021822;padding:8px 12px;background:#fff;border-radius:12px">OFERTA BLACK</div>
+    <a href="https://wa.me/5511913076990?text=Quero%20Oferta%20Black%20-%20Prioridade%20Imediata" title="Prioridade Imediata">Prioridade Imediata</a>
+  </div>
+
+  <!-- light JS for subtle accessibility enhancement (no frameworks) -->
+  <script>
+    // quick focus for keyboard users: focus first CTA
+    document.addEventListener('DOMContentLoaded', function(){
+      const cta = document.querySelector('.cta');
+      if(cta && window.location.hash === '#start') cta.focus();
+    });
+  </script>
 </body>
 </html>
+
+
 
 
