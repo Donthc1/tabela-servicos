@@ -4,10 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Tabela Oficial de Serviços — NEXUS INTEL</title>
-  <meta name="description" content="Tabela de preços e serviços da Nexus Intel — Investigação Digital, OSINT, análise forense, relatórios profissionais.">
+  <meta name="description" content="Tabela de serviços da Nexus Intel — Investigação Digital, OSINT, consultas e análise forense.">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-
   <style>
     :root{
       --bg:#071323;
@@ -41,10 +40,6 @@
     .hero h1{margin:0;font-size:24px}
     .hero p{color:var(--muted);margin:10px 0 0}
 
-    .badge-row{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
-    .btn{padding:10px 14px;border-radius:999px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);text-decoration:none;font-weight:700}
-    .cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#01202a;padding:10px 16px;border-radius:12px;font-weight:800;text-decoration:none}
-
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
     .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid var(--glass);box-shadow:0 12px 30px rgba(2,8,20,0.6)}
     .card h3{margin:0 0 8px;font-size:18px}
@@ -65,11 +60,9 @@
       .brand{font-size:20px}
     }
 
-    /* small printable style */
     @media print{
       body{background: #fff;color:#000}
       .hero, .card, .adicionais{background:#fff;border:1px solid #ddd;box-shadow:none}
-      .cta, .btn{display:none}
     }
   </style>
 </head>
@@ -80,50 +73,67 @@
         <div class="brand">NEXUS INTEL</div>
         <div class="sub">Investigação Digital • Sigilo • Provas</div>
       </div>
-      <div style="display:flex;gap:12px;align-items:center">
-        <a class="btn" href="/">Voltar ao site</a>
-        <!-- link para o PDF: verifique que /Tabela_Nexus_Intel.pdf exista na raiz -->
-        <a class="cta" href="/Tabela_Nexus_Intel.pdf" download>Baixar PDF da Tabela</a>
+      <!-- sem botões públicos para download - manter invisível no site -->
+      <div style="opacity:0.0;pointer-events:none;visibility:hidden">
+        <!-- local reservado caso queira colocar link privado mais tarde -->
       </div>
     </header>
 
     <section class="hero" aria-labelledby="titulo">
       <h1 id="titulo">Tabela Oficial de Serviços — NEXUS INTEL</h1>
-      <p>Preços estratégicos, descrições claras e justificativas para clientes. Pagamento padrão: <strong>50% na abertura / 50% na entrega</strong>.</p>
-
-      <div class="badge-row" aria-hidden="true">
-        <div class="sub">Atendimento prioritário</div>
-        <div class="sub">Sigilo total</div>
-        <div class="sub">Relatórios prontos para uso jurídico</div>
-      </div>
+      <p>Valores e pacotes de investigação digital. Documentação e relatório profissional entregues após análise. Pagamento padrão: <strong>50% na abertura / 50% na entrega</strong>.</p>
     </section>
 
     <section aria-labelledby="servicos" style="margin-top:22px">
-      <h2 id="servicos" style="margin:0 0 10px">Planos</h2>
+      <h2 id="servicos" style="margin:0 0 10px">Planos e Serviços</h2>
 
       <div class="grid" role="list">
         <article class="card" role="listitem" aria-labelledby="basic-title">
-          <div id="basic-title"><h3>Faixa 1 — Investigação Básica</h3></div>
+          <div id="basic-title"><h3>Investigação Básica</h3></div>
           <div class="price">R$ 250 – R$ 450</div>
           <p class="muted"><strong>Prazo médio:</strong> 12–48h<br><strong>Pagamento:</strong> 50% início / 50% entrega</p>
-          <p class="muted" style="margin-top:8px"><strong>Inclui:</strong> coleta inicial OSINT; rastreio leve (número, e-mail, usuário); prints e evidências iniciais; relatório simples em PDF.</p>
-          <p style="margin-top:10px;color:var(--muted);font-size:13px">Recomendado para triagem e confirmação rápida de suspeitas.</p>
+
+          <p class="muted" style="margin-top:8px"><strong>Inclui:</strong></p>
+          <ul style="color:var(--muted);margin:8px 0 0 18px">
+            <li>Coleta OSINT inicial (verificação de presença online e perfis públicos).</li>
+            <li>Rastreio leve por número, e-mail ou usuário.</li>
+            <li>Busca preliminar por nome e localizações públicas.</li>
+            <li>Prints e evidências iniciais organizadas em PDF.</li>
+          </ul>
+
+          <p style="margin-top:10px;color:var(--muted);font-size:13px">Recomendado para triagem e confirmação de suspeitas com baixo custo inicial.</p>
         </article>
 
         <article class="card" role="listitem" aria-labelledby="complete-title">
-          <div id="complete-title"><h3>Faixa 2 — Investigação Completa (Recomendada)</h3></div>
+          <div id="complete-title"><h3>Investigação Completa (Recomendada)</h3></div>
           <div class="price">R$ 650 – R$ 1.200</div>
           <p class="muted"><strong>Prazo médio:</strong> 24–72h<br><strong>Pagamento:</strong> 50% início / 50% entrega</p>
-          <p class="muted" style="margin-top:8px"><strong>Inclui:</strong> OSINT avançado; rastreamento em redes sociais; histórico digital; análise de vínculos e conexões; cruzamento de dados; relatório detalhado profissional.</p>
-          <p style="margin-top:10px;color:var(--muted);font-size:13px">Ótimo equilíbrio entre custo e profundidade — indicado em 70% dos casos.</p>
+
+          <p class="muted" style="margin-top:8px"><strong>Inclui:</strong></p>
+          <ul style="color:var(--muted);margin:8px 0 0 18px">
+            <li>OSINT avançado e varredura em redes sociais públicas.</li>
+            <li>Cruzamento de dados e identificação de perfis alternativos.</li>
+            <li>Consultas ampliadas por dados públicos sob autorização: CPF (verificação de existência/registro público), busca por nome, telefone e endereços vinculados a fontes públicas e registros.</li>
+            <li>Mapa de conexões e relatório detalhado pronto para apresentação.</li>
+          </ul>
+
+          <p style="margin-top:10px;color:var(--muted);font-size:13px">Equilíbrio ideal entre profundidade e custo — indicado na maioria dos casos complexos.</p>
         </article>
 
         <article class="card" role="listitem" aria-labelledby="deep-title">
-          <div id="deep-title"><h3>Faixa 3 — Investigação Profunda / Forense</h3></div>
+          <div id="deep-title"><h3>Investigação Profunda / Forense</h3></div>
           <div class="price">R$ 1.500 – R$ 3.000</div>
           <p class="muted"><strong>Prazo médio:</strong> 24–96h<br><strong>Pagamento:</strong> 50% início / 50% entrega</p>
-          <p class="muted" style="margin-top:8px"><strong>Inclui:</strong> análise forense avançada; ferramentas profissionais; varredura profunda; mapa de conexões elaborado; laudo técnico; atendimento prioritário 24/7.</p>
-          <p style="margin-top:10px;color:var(--muted);font-size:13px">Indicado para casos judiciais, golpes complexos ou empresas.</p>
+
+          <p class="muted" style="margin-top:8px"><strong>Inclui:</strong></p>
+          <ul style="color:var(--muted);margin:8px 0 0 18px">
+            <li>Análise forense digital completa e investigação multilayer.</li>
+            <li>Uso de ferramentas profissionais e processos de validação para evidências admíssiveis em esfera jurídica.</li>
+            <li>Consultas aprofundadas (sob autorização e conforme legislação): verificação de CPF, checagem de histórico por nome, pesquisa por números de telefone, levantamento de endereços e vínculos públicos.</li>
+            <li>Laudo técnico detalhado, mapa de conexões e assistência prioritária 24/7.</li>
+          </ul>
+
+          <p style="margin-top:10px;color:var(--muted);font-size:13px">Indicado para casos judiciais, grandes fraudes ou empresas que necessitam de laudo técnico.</p>
         </article>
       </div>
     </section>
@@ -131,29 +141,30 @@
     <section class="adicionais" aria-labelledby="add" style="margin-top:18px">
       <h3 id="add">Adicionais & Taxas</h3>
       <ul style="color:var(--muted);margin:8px 0 0;padding-left:18px">
-        <li><strong>Taxa de urgência:</strong> +R$ 150 – R$ 400 (entrega acelerada “para hoje”)</li>
-        <li><strong>Alvo adicional:</strong> +R$ 80 – R$ 250 (cada número/perfil/e-mail extra)</li>
-        <li><strong>Taxa de confidencialidade premium:</strong> +R$ 100 (acesso restrito somente ao investigador responsável)</li>
-        <li><strong>Relatório forense em PDF formatado:</strong> +R$ 80 (ideal para advogados)</li>
+        <li><strong>Taxa de urgência:</strong> +R$ 150 – R$ 400 (entrega acelerada “para hoje”).</li>
+        <li><strong>Alvo adicional:</strong> +R$ 80 – R$ 250 (cada número/perfil/e-mail extra).</li>
+        <li><strong>Taxa de confidencialidade premium:</strong> +R$ 100 (acesso restrito somente ao investigador responsável).</li>
+        <li><strong>Relatório forense formatado para advocacia:</strong> +R$ 80.</li>
       </ul>
 
       <div style="margin-top:12px;color:var(--muted)">
-        <strong>Observações:</strong> valores podem variar conforme complexidade do caso (ex.: múltiplos alvos, bloqueios técnicos, necessidade de ferramentas pagas). Pagamento inicial cobre horas de pesquisa, licenças de ferramentas e configuração do caso.
+        <strong>Observações:</strong> Consultas e verificações por CPF/nome/telefone/endereço são realizadas sempre em conformidade com a legislação (LGPD). Serviços que envolvem dados pessoais sensíveis são executados apenas mediante autorização do cliente e documentação necessária. Valores podem variar conforme complexidade técnica.
       </div>
     </section>
 
+    <!-- seção de contato reduzida para quem já tem o link -->
     <section style="margin-top:18px">
-      <h3>Modelos de mensagens prontas</h3>
-      <div style="background:transparent;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);margin-top:8px">
-        <p style="color:var(--muted);margin:0 0 8px"><strong>Explicação do preço:</strong> "Utilizamos metodologia OSINT profissional e ferramentas forenses não disponíveis ao público. O investimento cobre infraestrutura e expertise que garantem provas verificáveis."</p>
-        <p style="color:var(--muted);margin:0 0 8px"><strong>Sinal de 50%:</strong> "O sinal garante início imediato do trabalho. O restante é pago após entrega do relatório."</p>
-      </div>
+      <h3>Como solicitar</h3>
+      <p style="color:var(--muted)">Para receber a Tabela oficial completa em PDF e iniciar o atendimento, entre em contato por WhatsApp ou e-mail. Após pré-avaliação, encaminharemos proposta específica e contrato.</p>
+      <p style="color:var(--muted)"><strong>WhatsApp:</strong> +55 11 91307-6990 • <strong>E-mail:</strong> contato@nexusintel.com</p>
     </section>
 
     <div class="foot" role="contentinfo">
       <div>NEXUS INTEL — Investigação Digital • Sigilo • Provas</div>
-      <div style="margin-top:6px">E-mail: contato@nexusintel.com • Tel/WhatsApp: +55 11 91307-6990</div>
+      <div style="margin-top:6px;color:var(--muted)">Documento restrito — disponibilize somente após contato inicial com o cliente.</div>
     </div>
   </div>
 </body>
 </html>
+
+
